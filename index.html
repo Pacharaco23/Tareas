@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
     <br><br>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card border rounded"> <!-- Contenedor blanco con bordes redondeados -->
-                    <div class="card-header"> <!-- Encabezado con fondo azul -->
+            <div class="col-md-6 form">
+                <div class="card square">
+                    <div class="card-header border-0"> 
                         <button type="button" class="btn btn-primary"onclick="nuevo()" >Nuevo</button>
                         <button type="button" class="btn btn-success" onclick="guardar()" >Guardar</button>
                         <button type="button" class="btn btn-info text-white" onclick="cancelar()">Cancelar</button>
                         <button type="button" class="btn btn-danger" onclick="eliminar()">Eliminar</button>
+                        <hr>
                     </div>
                     <div class="card-body">
                         <form id="formulario" onsubmit="return guardar()">

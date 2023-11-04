@@ -9,7 +9,7 @@ function bloquearFormulario() {
     }
   }
 
-  function desbloquearFormulario() {
+function desbloquearFormulario() {
     // Obtiene todos los elementos del formulario
     var elementosFormulario = document.getElementById("formulario").elements;
     // Itera a través de los elementos y los habilita
@@ -103,14 +103,12 @@ function ultimoElemento() {
 }
 
 // Muestra los datos del elemento actual
-// Muestra los datos del elemento actual
 function mostrarElemento() {
     if (currentIndex >= 0 && currentIndex < usuarios.length) {
       var usuarioActual = usuarios[currentIndex];
       document.getElementById("nombre").value = usuarioActual[0];
       document.getElementById("Apellido").value = usuarioActual[1];
-      
-      // Corregir la selección del campo "opciones" utilizando selectedIndex
+    
       var opcionesSelect = document.getElementById("opciones");
       for (var i = 0; i < opcionesSelect.options.length; i++) {
         if (opcionesSelect.options[i].text === usuarioActual[2]) {
@@ -124,8 +122,6 @@ function mostrarElemento() {
     }
   }
   
-
-
 function guardar(){
     let nombre = document.getElementById("nombre").value;
     let apellido = document.getElementById("Apellido").value;
@@ -133,11 +129,6 @@ function guardar(){
     let egresados = document.getElementById("egresados").checked;
     let lista = document.getElementById("opciones");
     let texto = lista.options[lista.selectedIndex].text;
-    console.log(nombre);
-    console.log(apellido);
-    console.log(sexo);
-    console.log(texto);
-    console.log(egresados);
     let nuevoElemento= Array();
     nuevoElemento.push(nombre);
     nuevoElemento.push(apellido);
